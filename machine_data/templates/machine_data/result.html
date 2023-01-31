@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Machine Data</title>
+</head>
+<body>
+
+{% for p in records %}
+    </hr>
+    <h3>{{ p.new_l_processsettingname }}</h3>
+    <h4>{{ p.new_l_headspecificationname }}</h4>
+    <p>{{ p.new_workeryominame }}</p>
+{% endfor %}
+
+</body>
+</html>
