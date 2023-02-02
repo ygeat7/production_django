@@ -3,13 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Machine Information - {{ record.new_l_processsettingname }}</title>
+    <style>
+        .box1, .box2{
+            float:left;
+            height:230px;
+            width:300px;
+            margin:auto;
+        }
+        .main-frame{
+            width:1000px;
+            margin:auto;
+        }
+        .option{
+            clear:both;
+        }
+    </style>
 </head>
 <body>
-    <h3>{{ record.new_l_processsettingname }}</h3>
-    <h4>{{ record.new_l_headspecificationname }}</h4>
-    <h4>{{ record.new_workeryominame }}</h4>
-    <h4>{{ record.new_dt_request }}</h4>
-    <p style="white-space: pre;">{{ record.new_ntxt_optiondetails }}</p>
-    <p>{{ record.new_ntxt_etcdetails }}</p>
+    <div class="main-frame">
+        <div>
+            <h2>{{ record.new_l_processsettingname }}({{ record.new_l_machinehistoryname }}) - {{ record.new_modelgroupname }}</h2>
+            <h3>Head Spec : {{ record.new_l_headspecificationname }}</h3>
+            <h2>Customer : {{ record.new_l_customername }}</h2>
+        </div>
+        <hr>
+        <div class="box1">
+            <h2>담당자</h2>
+            <h3>{{ record.new_workeryominame }}</h3>
+            <h2>Line</h2>
+            <h3>{{ record.location }}</h3>
+        </div>
+        <div class="box2">
+            <h2>협력사</h2>
+                <div>
+                    <h3>기계업체 : {{ record.new_p_machinemanufacturer }}</h3>
+                    <h3>전장업체 : {{ record.new_p_framemanufacturer }}</h3>
+                    <h3>판금업체 : {{ record.new_p_covermanufacturer }}</h3>
+                </div>
+        </div>
+        <div class="option">
+            <hr>
+            <h2>Option</h2>
+            <p style="white-space: pre;">{{ record.new_ntxt_optiondetails }}</p>
+            <h2>Remark</h2>
+            <p>{{ record.new_ntxt_etcdetails }}</p>
+        </div>
+    </div>
+
 </body>
 </html>
