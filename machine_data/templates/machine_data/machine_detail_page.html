@@ -46,7 +46,11 @@
             <h2>Option</h2>
             <p style="white-space: pre;">{{ record.new_ntxt_optiondetails }}</p>
             <h2>Remark</h2>
-            <p>{{ record.new_ntxt_etcdetails }}</p>
+            {% if record.new_ntxt_etcdetails %}
+                <p>{{ record.new_ntxt_etcdetails }}</p>
+            {% else %}
+                <p></p>
+            {% endif %}
         </div>
     </div>
 
