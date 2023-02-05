@@ -27,3 +27,6 @@ class MachineData(models.Model):
 
     def __str__(self):
         return f'[{self.new_l_processsettingname}({self.new_l_machinehistoryname})]{self.new_modelgroupname}'
+
+    def get_absolute_url(self):
+        return f'/machinedata/{self.pk}'

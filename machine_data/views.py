@@ -43,8 +43,8 @@ class MachineSearch(MachineList):
     def get_queryset(self):
         q = self.kwargs['q']
         machine_list = MachineData.objects.filter(
-            Q(new_l_processsettingname__contains=q) | Q(new_l_machinehistoryname__contains=q)
-        ).distinct()
+            Q(new_l_processsettingname__icontains=q) | Q(new_l_machinehistoryname__icontains=q) ##icontains : 대소문자 구분X
+        )
         return machine_list
 
     def get_context_data(self, **kwargs):
@@ -53,7 +53,3 @@ class MachineSearch(MachineList):
         context['search_info'] = f'Search: {q} ({self.get_queryset().count()})'
 
         return context
-
-
-
-
