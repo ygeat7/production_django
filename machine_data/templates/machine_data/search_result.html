@@ -1,17 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
+{% load static %}
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>Machine Data</title>
-</head>
-<body>
-<h2>Search Result</h2>
-{% for p in machinedata_list %}
-    <hr>
-    <h3><a href="{{ p.get_absolute_url }}">{{ p.new_l_processsettingname }}</a></h3>
-    <h4>{{ p.new_l_headspecificationname }}</h4>
-    <p>{{ p.new_workeryominame }}</p>
-{% endfor %}
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
-</body>
+    <link rel="stylesheet" href="{% static 'searchresult/fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'searchresult/css/owl.carousel.min.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'searchresult/css/bootstrap.min.css' %}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'searchresult/css/style.css' %}">
+
+    <title>Search Result</title>
+  </head>
+  <body>
+  
+
+  <div class="content">
+    
+    <div class="container">
+      <h2 class="mb-5">Search Result</h2>
+
+      <div class="table-responsive">
+
+        <table class="table table-striped custom-table">
+          <thead>
+            <tr>
+              <th scope="col">Tracking No <br> (Serial No) </th>
+              <th scope="col">Customer</th>
+              <th scope="col">Machine Type <br> (Head Spec) </th>
+              <th scope="col">프레임입고일</th>
+              <th scope="col">출하예정일</th>
+              <th scope="col">Charge</th>
+              <th scope="col">Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for p in machinedata_list %}
+            <tr>
+              <td>
+                <a href="{{ p.get_absolute_url }}" class="name">{{ p.new_l_processsettingname }}<small class="d-block">{{ p.new_l_machinehistoryname }}</small></a>
+              </td>
+              <td>
+                {{ p.new_l_customername }}
+              </td>
+              <td>
+                {{ p.new_modelgroupname }}
+                <br>
+                <small class="d-block">{{ p.new_l_headspecificationname }}</small>
+              </td>
+              <td>
+                {{ p.new_dt_endelectronics }}
+              </td>
+              <td>
+                {{ p.new_dt_request }}
+              </td>
+              <td>
+                {{ p.new_workeryominame }}
+              </td>
+              <td>
+                {{ p.location }}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+    
+    
+
+    <script src="{% static 'searchresult/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'searchresult/js/popper.min.js' %}"></script>
+    <script src="{% static 'searchresult/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'searchresult/js/main.js' %}"></script>
+  </body>
 </html>
