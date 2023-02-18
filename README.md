@@ -1,10 +1,12 @@
 # Django을 사용한 Mahcine 정보 조회 웹애플리케이션 구현
+설비 고객사, 사양, 일정, 담당자 등의 정보를 쉽고 빠르게 조회할 수 있는 웹페이지입니다.
+MySQL 서버를 구축하고 Django와 연동하였습니다.
 
-## [1. 메인 검색 페이지]
+### [1. 메인 검색 페이지]
 ![메인 페이지](https://user-images.githubusercontent.com/62248817/219858852-c52ea673-0b6a-4747-b47d-f23966192f00.jpg)
 
-## [2. 검색 결과 페이지]
-![검색 결과](https://user-images.githubusercontent.com/62248817/219859128-49c3716a-e135-4a88-b7fe-70103b9918cf.jpg)
+### [2. 검색 결과 페이지]
+![검색 결과 blur](https://user-images.githubusercontent.com/62248817/219863876-852d8d8a-26ee-447d-b0a1-c12751c65cfe.jpg)
 
-## [3. 상세 페이지]
-![상세페이지2](https://user-images.githubusercontent.com/62248817/219859397-95b55a41-7c92-4b0e-b7b1-2e6d665ba5b9.jpg)
+### [3. 상세 페이지]
+![상세페이지2 blur](https://user-images.githubusercontent.com/62248817/219863878-717da001-59a0-483d-b380-10617d63668e.jpg)
