@@ -4,9 +4,9 @@ DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.mysql',
         'NAME' : 'productiondb',
-        'USER' : 'jk.lim',
-        'PASSWORD' : 'zvwef1343!',
-        'HOST' : '11.11.0.222',
+        'USER' : '*****',
+        'PASSWORD' : '*****',
+        'HOST' : '*****',
         'PORT' : '3306',
     }
 }
